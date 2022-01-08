@@ -8,6 +8,6 @@ permalink: 'posts/{{ post.id }}/'
 ---
 <div class='page-content'>
     <h2>{{ post.name }}</h2>
-    <image alt='' src='/img/{{ post.imgs }}' />
+    <image alt='' src='/img/{{ post.filename }}' />
     <p>{{ post.introduction }}</p>
 </div>
