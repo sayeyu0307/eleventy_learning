@@ -1,14 +1,37 @@
 * {
     padding: 0;
+    margin: 0;
 }
-
+html, body{
+    min-height: 100vh;
+}
 .page-content {
+    min-height: 100vh;
     max-width: 677px;
     margin: 0 auto;
     text-align: center;
+    background: aliceblue;
+    
 }
 
 img {
     width: 80vw;
-    max-width: 650px;
+    max-width: 540px;
+}
+
+#vs-body {
+    width: 330px;
+    height: 55px;
+    margin: 20px auto;
+    border-radius: 30px;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,.37),rgba(0,0,0,.75),rgba(0,0,0,.75)) !important;
+}
+
+#vs {
+    margin: 0 auto;
+    background: none !important;
+}
+
+.xgplayer-skin-default .xgplayer-controls {
+    background-image: none !important;
 }

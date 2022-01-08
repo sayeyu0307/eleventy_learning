@@ -6,8 +6,9 @@ pagination:
   alias: post
 permalink: 'posts/{{ post.id }}/'
 ---
-<div class='page-content'>
-    <h2>{{ post.name }}</h2>
-    <img alt='' src='/img/{{ post.filename }}' />
-    <p>{{ post.introduction }}</p>
+<h2>{{ post.name }}</h2>
+<div id="vs-body">
+  <div id="vs" data-src="{{ post.voice }}" data-name="{{ post.name }}" ></div>
 </div>
+<img alt='' src='/img/{{ post.filename }}' />
+<p>{{ post.introduction }}</p>

@@ -18,10 +18,17 @@ module.exports = async () => {
     try {
         const response = await fetch('http://42.192.46.235/dev-api/exhibit/info/list?pageNum=1&pageSize=10').then(x => x.json()).then(x => x.rows)
         for (let i = 0; i < response.length; i++) {
-            const {imgs} = response[i];
+            const {imgs,voice} = response[i];
             await download(`http://42.192.46.235/dev-api${imgs}`, `src/img/${imgs.split("/").reverse()[0]}`)
+            await download(`http://42.192.46.235/dev-api${voice}`, `src/img/${voice.split("/").reverse()[0]}`)
         }
-        return response.map(element =>  Object.assign(element,{filename:element.imgs.split("/").reverse()[0]}));
+        return response.map(element =>  Object.assign(
+            element,
+            {
+                filename:element.imgs.split("/").reverse()[0],
+                voice:element.voice.split("/").reverse()[0]
+            }
+        ));
     } catch (error) {
         console.log(error)
         return []

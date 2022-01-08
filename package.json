@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "node-fetch": "^2.6.6"
+    "jsdom": "^19.0.0",
+    "node-fetch": "^2.6.6",
+    "xgplayer": "^2.31.4"
   }
 }
